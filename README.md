@@ -1,1 +1,1 @@
-# logger-cli
+# Logger CLI
