@@ -5,28 +5,21 @@ package tag
 
 import (
 	"fmt"
-	"github.com/sanjeevrayasam/logger-cli/cmd"
 
 	"github.com/spf13/cobra"
 )
 
 // tagCmd represents the tag command
-var tagCmd = &cobra.Command{
+var TagCmd = &cobra.Command{
 	Use:   "tag",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Use tag command to perform operation on tags",
+	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("tag called")
 	},
 }
 
 func init() {
-	cmd.rootCmd.AddCommand(tagCmd)
 
 	// Here you will define your flags and configuration settings.
 

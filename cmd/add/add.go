@@ -1,8 +1,7 @@
 /*
 Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-
 */
-package cmd
+package add
 
 import (
 	"fmt"
@@ -11,22 +10,16 @@ import (
 )
 
 // add/addCmd represents the add/add command
-var add/addCmd = &cobra.Command{
-	Use:   "add/add",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+var AddCmd = &cobra.Command{
+	Use:   "add",
+	Short: "Add a new entry of log into the system",
+	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("add/add called")
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(add/addCmd)
 
 	// Here you will define your flags and configuration settings.
 

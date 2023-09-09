@@ -1,8 +1,7 @@
 /*
 Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-
 */
-package cmd
+package list
 
 import (
 	"fmt"
@@ -11,22 +10,16 @@ import (
 )
 
 // list/listCmd represents the list/list command
-var list/listCmd = &cobra.Command{
-	Use:   "list/list",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+var ListCmd = &cobra.Command{
+	Use:   "list",
+	Short: "List command helps to get the list of logs",
+	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("list/list called")
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(list/listCmd)
 
 	// Here you will define your flags and configuration settings.
 

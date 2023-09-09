@@ -6,6 +6,11 @@ package cmd
 import (
 	"os"
 
+	"github.com/sanjeevrayasam/logger-cli/cmd/add"
+	"github.com/sanjeevrayasam/logger-cli/cmd/board"
+	"github.com/sanjeevrayasam/logger-cli/cmd/list"
+	"github.com/sanjeevrayasam/logger-cli/cmd/tag"
+
 	"github.com/spf13/cobra"
 )
 
@@ -27,8 +32,16 @@ func Execute() {
 		os.Exit(1)
 	}
 }
+func addCommands() {
+	rootCmd.AddCommand(tag.TagCmd)
+	rootCmd.AddCommand(add.AddCmd)
+	rootCmd.AddCommand(board.BoardCmd)
+	rootCmd.AddCommand(list.ListCmd)
+
+}
 
 func init() {
+	addCommands()
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
